@@ -25,6 +25,11 @@ void insertion_sort_list(listint_t **list)
 					tmp->prev->next = node;
 					node->prev = tmp->prev;
 				}
+				else
+				{
+					*list = node;
+					node->prev = NULL;
+				}
 				tmp->prev = node;
 				print_list(*list);
 				tmp = node;
